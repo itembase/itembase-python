@@ -46,11 +46,11 @@ class ItembaseAPI(object):
 
     def do_user_list(self, list_name, user=None, *args, **kwargs):
         user = user if user else self.user
-        return self.do_request("http://{0}/v1/users/{1}/{2}".format(self.host, user, list_name), params=kwargs)
+        return self.do_request("https://{0}/v1/users/{1}/{2}".format(self.host, user, list_name), params=kwargs)
 
     def do_user_single(self, list_name, entity_id, user=None, *args, **kwargs):
         user = user if user else self.user
-        return self.do_request("http://{0}/v1/users/{1}/{2}/{3}".format(self.host, user, list_name, entity_id), params=kwargs)
+        return self.do_request("https://{0}/v1/users/{1}/{2}/{3}".format(self.host, user, list_name, entity_id), params=kwargs)
 
     def profiles(self, user=None, *args, **kwargs):
         return self.do_user_list("profiles", user, *args, **kwargs)

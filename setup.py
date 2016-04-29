@@ -11,7 +11,7 @@ long_description = ""
 
 setup(
     name='itembase-python',
-    version='0.9b1',
+    version='0.9b2',
     description='Itembase Python bindings',
     long_description=long_description,
     url='https://github.com/itembase/itembase-python',
