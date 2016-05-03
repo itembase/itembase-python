@@ -70,6 +70,9 @@ class ItembaseAPI(object):
     def buyer(self, entity_id, user=None, *args, **kwargs):
         return self.do_user_single("buyers", entity_id, user, *args, **kwargs)
 
+    def buyers(self, user=None, *args, **kwargs):
+        return self.do_user_list("buyers", user, *args, **kwargs)
+
     def request_pretty(self):
         req = self.response.request
         return '{}\n{}\n\n{}'.format(
